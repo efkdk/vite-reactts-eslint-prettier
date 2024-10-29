@@ -19,7 +19,15 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js'],
+    ignores: [
+      'dist',
+      'dist-ssr',
+      'node_modules',
+      'coverage',
+      'eslint.config.js',
+      '*.config.*',
+      '*.local',
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -48,6 +56,9 @@ export default tseslint.config(
       'max-lines': ['warn', { max: 124 }],
       'max-params': ['error', 3],
       'linebreak-style': 'off',
+      'no-console': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
 );
