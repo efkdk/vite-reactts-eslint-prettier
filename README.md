@@ -21,23 +21,17 @@ Ensure you have the following tools installed:
 
 ### Installation
 
-Clone repo and run 
+Clone repo with
+```bash
+npx degit efkdk/vite-reactts-eslint-prettier your-app-name
+```
+and run 
 ```bash
 npm install
 ```
 or
 ```bash
 yarn install
-```
-## Start
-
-Run 
-```bash
-npm run dev
-```
-or
-```bash
-yarn dev
 ```
 ## Steps in VS Code
 
@@ -57,4 +51,14 @@ yarn dev
 }
 ```
 5. Open a .tsx file and check if the bottom right corners of vs code have Eslint and Prettier with a double tick
+## Start
+
+Run 
+```bash
+npm run dev
+```
+or
+```bash
+yarn dev
+```
 ### Happy coding :)
