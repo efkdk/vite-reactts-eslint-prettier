@@ -59,6 +59,17 @@ export default tseslint.config(
       'no-console': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      // fix for issue:
+      // TypeError: Error while loading rule '@typescript-eslint/no-unused-expressions': Cannot read properties of undefined (reading 'allowShortCircuit')
+      // Occurred while linting /home/ext4cats/Projects/tseslint-8.14.0-bug/index.js
+      // delete if unnecessary
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+        },
+      ],
     },
   },
 );
